@@ -47,7 +47,7 @@
 						<label for="userId">Unique ID</label>
 							<input type="text" class="form-control" id="userId" placeholder="">
 						</div>
-						<button type="submit" class="btn btn-primary">Submit</button>
+						<button type="submit" class="submit btn btn-primary">Submit</button>
 					</form>
 				</div>
 			</div>
@@ -72,7 +72,9 @@
 				id: $("#userId").val().trim(),
 			};
 
-			$.post("/api/tables", request, function(data){
+			console.log(request)
+
+			$.post("/api/reserved", request, function(data){
 				if (data) {
 					alert("booked!");
 				}
